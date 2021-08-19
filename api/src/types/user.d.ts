@@ -1,13 +1,14 @@
 import { UserData } from 'src/models/user';
-import { ApiResponse, ApiResponseError } from 'src/types/base';
+import { ApiReply, ApiReplyError } from 'src/types/base';
 
-interface UserResponse extends ApiResponse {
-  data?: UserResponseData;
+interface UserReply extends ApiReply {
+  data?: UserReplyData;
 }
 
-interface UserResponseData {
-  error?: UserResponseError;
+interface UserReplyData {
+  error?: UserReplyError;
   user?: UserData;
+  users?: UserData[];
 }
 
-type UserResponseError = ApiResponseError;
+type UserReplyError = ApiReplyError;
