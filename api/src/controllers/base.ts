@@ -1,22 +1,29 @@
 import { Request, Response } from 'express';
+import { ApiReply } from 'src/types/base';
 
 class BaseController {
-  public static getAll(req: Request, res: Response): void {
-    throw new Error('Not implemented!');
-  }
-  public static getOne(req: Request, res: Response): void {
+  public static async getAll(req: Request, res: Response): Promise<void> {
     throw new Error('Not implemented!');
   }
 
-  public static create(req: Request, res: Response): void {
+  public static async getOne(req: Request, res: Response): Promise<void> {
     throw new Error('Not implemented!');
   }
 
-  public static update(req: Request, res: Response): void {
+  public static async create(req: Request, res: Response): Promise<void> {
     throw new Error('Not implemented!');
   }
-  public static delete(req: Request, res: Response): void {
+
+  public static async update(req: Request, res: Response): Promise<void> {
     throw new Error('Not implemented!');
+  }
+
+  public static async delete(req: Request, res: Response): Promise<void> {
+    throw new Error('Not implemented!');
+  }
+
+  protected static respondWith<T extends ApiReply>(res: Response, reply: T) {
+    res.status(reply.statusCode).json(reply.data || {});
   }
 }
 
