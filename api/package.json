@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV='DEV' && nodemon",
-    "test": "jest --config ./jest.config.ts --detectOpenHandles"
+    "test": "jest --config ./jest.config.ts --detectOpenHandles --modulePaths=./"
   },
   "dependencies": {
     "@types/node": "^16.6.1",
@@ -23,9 +23,9 @@
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.1",
     "@types/mongodb-memory-server": "^2.3.0",
-    "mongodb-memory-server": "^7.3.6",
-    "nodemon": "^2.0.12",
     "jest": "^27.0.6",
+    "mongodb-memory-server": "6.9.6",
+    "nodemon": "^2.0.12",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.0",
     "tsconfig-paths": "^3.10.1"
