@@ -1,4 +1,4 @@
-import { UserData } from 'src/models/user';
+import { UserData } from 'src/models/user.model';
 import { ApiReply, ApiReplyError } from 'src/types/base';
 
 interface UserReply extends ApiReply {
